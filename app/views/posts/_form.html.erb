@@ -19,9 +19,10 @@
     Tags:
   </div>
 
-  <div class="field">  
-    <%= f.fields_for(:tags) do |attributes| %>
-      <%= attributes.text_field :name %>
+  <div class="field">
+    <%= f.fields_for(:tags) do |tag_form| %>
+      <%= tag_form.label :name %>
+      <%= tag_form.text_field :name %>
     <% end %>
   </div>
 
